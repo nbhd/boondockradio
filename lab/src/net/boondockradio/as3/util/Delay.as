@@ -1,6 +1,5 @@
 package net.boondockradio.as3.util
 {
-	import flash.events.EventDispatcher;
 	import flash.events.TimerEvent;
 	import flash.utils.Dictionary;
 	import flash.utils.Timer;
@@ -9,7 +8,7 @@ package net.boondockradio.as3.util
 	 * Delay
 	 * @author oki_nobuhide
 	 */	
-	public class Delay extends EventDispatcher
+	public class Delay
 	{
 		private static var _id:uint;
 		private static var _timers:Dictionary = new Dictionary(true);
