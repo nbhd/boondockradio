@@ -1,7 +1,5 @@
 package net.boondockradio.as3.command
 {
-	import flash.utils.Dictionary;
-
 	/**
 	 * 1個ずつ実行する
 	 * @author oki_nobuhide
@@ -30,7 +28,6 @@ package net.boondockradio.as3.command
 		 * command 登録 
 		 * @param command
 		 * @return 
-		 * 
 		 */		
 		public function addCommand(command:ICommand):SerialCommand
 		{
@@ -43,7 +40,6 @@ package net.boondockradio.as3.command
 		 * @param callback
 		 * @param args
 		 * @return 
-		 * 
 		 */		
 		public function onComplete(callback:Function, ...args):SerialCommand
 		{

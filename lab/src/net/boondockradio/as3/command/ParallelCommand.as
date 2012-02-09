@@ -1,5 +1,9 @@
 package net.boondockradio.as3.command
 {
+	/**
+	 * 同時に実行
+	 * @author oki_nobuhide
+	 */	
 	public class ParallelCommand implements ICommandDelegate
 	{
 		//*********************************************************
@@ -24,7 +28,6 @@ package net.boondockradio.as3.command
 		 * command 登録 
 		 * @param command
 		 * @return 
-		 * 
 		 */	
 		public function addCommand(command:ICommand):ParallelCommand
 		{
@@ -37,7 +40,6 @@ package net.boondockradio.as3.command
 		 * @param callback
 		 * @param args
 		 * @return 
-		 * 
 		 */	
 		public function onComplete(callback:Function, ...args):ParallelCommand
 		{
