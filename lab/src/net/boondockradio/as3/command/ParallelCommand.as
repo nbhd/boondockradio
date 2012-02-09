@@ -31,6 +31,7 @@ package net.boondockradio.as3.command
 		 */	
 		public function addCommand(command:ICommand):ParallelCommand
 		{
+			command.delegate = this;
 			_commands.push(command);
 			return this;
 		}
@@ -64,7 +65,6 @@ package net.boondockradio.as3.command
 			for (i = 0; i < len; i++) 
 			{
 				queue = _commands[i];
-				queue.delegate = this;
 				queue.execute();
 			}
 		}

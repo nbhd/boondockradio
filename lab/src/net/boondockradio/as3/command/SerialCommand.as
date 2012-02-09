@@ -31,6 +31,7 @@ package net.boondockradio.as3.command
 		 */		
 		public function addCommand(command:ICommand):SerialCommand
 		{
+			command.delegate = this;
 			_commands.push(command);
 			return this;
 		}
@@ -59,7 +60,6 @@ package net.boondockradio.as3.command
 			}
 			
 			var queue:ICommand = _commands.shift();
-			queue.delegate = this;
 			queue.execute();
 		}
 		
