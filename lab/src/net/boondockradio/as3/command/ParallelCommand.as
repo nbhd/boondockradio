@@ -68,8 +68,8 @@ package net.boondockradio.as3.command
 		}
 		
 		/**
-		 * queue の complete handler
-		 */	
+		 * queue の complete 通知用 delegate method
+		 */
 		public function complete():void
 		{
 			_count++;
