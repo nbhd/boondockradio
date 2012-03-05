@@ -26,7 +26,7 @@ package net.boondockradio.as3.util
 		 * @param delay
 		 * @param callback
 		 * @param params
-		 * @return 
+		 * @return
 		 */		
 		public static function afterById(delay:int, callback:Function, params:Array = null):uint
 		{
@@ -34,7 +34,7 @@ package net.boondockradio.as3.util
 			timer.addEventListener(TimerEvent.TIMER_COMPLETE, completeHandler);
 			timer.start();
 			_timers[_id] = timer;
-			_callbacks[timer] = new Info(_id, callback, [_id]);
+			_callbacks[timer] = new Info(_id, callback, params);
 			
 			return _id++;
 		}
