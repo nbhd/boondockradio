@@ -51,9 +51,6 @@ package net.boondockradio.as3.util
 				timer.stop();
 				timer.removeEventListener(TimerEvent.TIMER_COMPLETE, completeHandler);
 				
-				var info:Info = _callbacks[timer];
-				if (info != null)
-					info.callback.apply(null, info.params);
 				delete _callbacks[timer];
 			}
 			delete _timers[id];
